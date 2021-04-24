@@ -68,6 +68,7 @@ namespace RList
             this.InputNumber.Name = "InputNumber";
             this.InputNumber.Size = new System.Drawing.Size(190, 23);
             this.InputNumber.TabIndex = 1;
+            this.InputNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputNumber_KeyPress);
             // 
             // buildListButton
             // 
@@ -150,6 +151,7 @@ namespace RList
             this.addFirstTextBox.Name = "addFirstTextBox";
             this.addFirstTextBox.Size = new System.Drawing.Size(190, 23);
             this.addFirstTextBox.TabIndex = 10;
+            this.addFirstTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AddFirstTextBox_KeyPress);
             // 
             // label1
             // 
@@ -210,6 +212,7 @@ namespace RList
             this.removeElementsTextBox.Name = "removeElementsTextBox";
             this.removeElementsTextBox.Size = new System.Drawing.Size(190, 23);
             this.removeElementsTextBox.TabIndex = 17;
+            this.removeElementsTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RemoveElementsTextBox_KeyPress);
             // 
             // removeElementsByValueButton
             // 
@@ -277,6 +280,7 @@ namespace RList
             this.firstIndexTextBox.Name = "firstIndexTextBox";
             this.firstIndexTextBox.Size = new System.Drawing.Size(37, 23);
             this.firstIndexTextBox.TabIndex = 24;
+            this.firstIndexTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FirstIndexTextBox_KeyPress);
             // 
             // label7
             // 
@@ -293,6 +297,7 @@ namespace RList
             this.lastIndexTextBox.Name = "lastIndexTextBox";
             this.lastIndexTextBox.Size = new System.Drawing.Size(37, 23);
             this.lastIndexTextBox.TabIndex = 26;
+            this.lastIndexTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LastIndexTextBox_KeyPress);
             // 
             // clearListButton
             // 

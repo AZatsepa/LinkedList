@@ -120,5 +120,44 @@ namespace RList
             addLastTextBox.Text = "";
             removeElementsTextBox.Text = "";
         }
+
+        private void AddFirstTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowNumbersAndBackSpaceOnly(e);
+        }
+
+        private void FirstIndexTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowNumbersAndBackSpaceOnly(e);
+        }
+
+        private void AllowNumbersAndBackSpaceOnly(KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((number <= 47 || number >= 58) && number != 8 && number != '-')
+                e.Handled = true;
+        }
+
+        private void AllowNumbersCommaAndBackSpaceOnly(KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((number <= 47 || number >= 58) && number != 8 && number != 44 && number != '-')
+                e.Handled = true;
+        }
+
+        private void LastIndexTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowNumbersAndBackSpaceOnly(e);
+        }
+
+        private void RemoveElementsTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowNumbersAndBackSpaceOnly(e);
+        }
+
+        private void InputNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowNumbersCommaAndBackSpaceOnly(e);
+        }
     }
 }
